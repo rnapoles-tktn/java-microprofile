@@ -1,0 +1,55 @@
+apiVersion: appsody.dev/v1beta1
+kind: AppsodyApplication
+metadata:
+  annotations:
+    commit.image.appsody.dev/author: Rodolfo Napoles <rnapoles@ca.ibm.com>
+    commit.image.appsody.dev/committer: Rodolfo Napoles <rnapoles@ca.ibm.com>
+    commit.image.appsody.dev/date: Fri Mar 6 16:03:05 2020 -0500
+    commit.image.appsody.dev/message: my first commit
+    image.opencontainers.org/created: "2020-03-06T16:15:47-05:00"
+    image.opencontainers.org/documentation: https://github.com/rnapoles-tktn/java-microprofile
+    image.opencontainers.org/revision: c953113fc2b0254723500233c5a7349052b9d1f7
+    image.opencontainers.org/source: https://github.com/rnapoles-tktn/java-microprofile/tree/master
+    image.opencontainers.org/url: https://github.com/rnapoles-tktn/java-microprofile
+    stack.appsody.dev/authors: Emily Jiang <emijiang6@googlemail.com>, Neeraj Laad
+      <neeraj.laad@gmail.com>, Ozzy <ozzy@ca.ibm.com>
+    stack.appsody.dev/configured: docker.io/appsody/java-microprofile:0.2
+    stack.appsody.dev/created: "2020-02-13T09:06:53Z"
+    stack.appsody.dev/description: Eclipse MicroProfile on Open Liberty & OpenJ9 using
+      Maven
+    stack.appsody.dev/licenses: Apache-2.0
+    stack.appsody.dev/tag: docker.io/appsody/java-microprofile:0.2.24
+    stack.appsody.dev/title: Eclipse MicroProfile®
+  creationTimestamp: null
+  labels:
+    image.opencontainers.org/title: java-microprofile
+    stack.appsody.dev/id: java-microprofile
+    stack.appsody.dev/version: 0.2.24
+  name: java-microprofile
+  namespace: kabanero
+spec:
+  applicationImage: dev.local/java-microprofile
+  createKnativeService: false
+  expose: true
+  livenessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /health/live
+      port: 9080
+    initialDelaySeconds: 5
+    periodSeconds: 2
+  readinessProbe:
+    failureThreshold: 12
+    httpGet:
+      path: /health/ready
+      port: 9080
+    initialDelaySeconds: 5
+    periodSeconds: 2
+    timeoutSeconds: 1
+  service:
+    annotations:
+      prometheus.io/scrape: "true"
+    port: 9080
+    type: NodePort
+  stack: java-microprofile
+  version: 1.0.0
