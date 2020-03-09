@@ -4,11 +4,11 @@ metadata:
   annotations:
     commit.image.appsody.dev/author: Rodolfo Napoles <rnapoles@ca.ibm.com>
     commit.image.appsody.dev/committer: Rodolfo Napoles <rnapoles@ca.ibm.com>
-    commit.image.appsody.dev/date: Fri Mar 6 16:03:05 2020 -0500
-    commit.image.appsody.dev/message: my first commit
-    image.opencontainers.org/created: "2020-03-06T16:15:47-05:00"
+    commit.image.appsody.dev/date: Fri Mar 6 16:22:52 2020 -0500
+    commit.image.appsody.dev/message: Adding app-deploy yaml file
+    image.opencontainers.org/created: "2020-03-09T13:38:56-04:00"
     image.opencontainers.org/documentation: https://github.com/rnapoles-tktn/java-microprofile
-    image.opencontainers.org/revision: c953113fc2b0254723500233c5a7349052b9d1f7
+    image.opencontainers.org/revision: f12f869591f3f70f8c9f0f5e27094a5a8f978b9b
     image.opencontainers.org/source: https://github.com/rnapoles-tktn/java-microprofile/tree/master
     image.opencontainers.org/url: https://github.com/rnapoles-tktn/java-microprofile
     stack.appsody.dev/authors: Emily Jiang <emijiang6@googlemail.com>, Neeraj Laad
